@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/estilos.css">
+    <title>Lenguaje de programación C</title>
+</head>
+<body>
+    <nav id="nav-bar">
+        <header>
+            <h1>C Documentación</h1>
+        </header>
+        <ul>
+                <li>
+                    <a href="#introduccion">Introducción</a>
+                </li>
+                <li>
+                    <a href="#tipos-operadores-expreciones">Operadores, expresiones</a>
+                </li>
+                <li>
+                    <a href="#control-de-flujo">Control de flujo</a>
+                </li>
+                <li>
+                    <a href="#arrays-y-punteros">Arrays y punteros</a>
+                </li>
+                <li>
+                    <a href="#estructuras">Estructuras</a>
+                </li>
+                <li>
+                    <a href="#biblioteca-c">Biblioteca C</a>
+                </li>
+                <li>
+                    <a href="#herramientas">Herreamientas</a>
+                </li>
+                <li>
+                    <a href="#biblioteca-stdio">Biblioteca stdio.h</a>
+                </li>
+                <li>
+                    <a href="#biblioteca-graphics">Biblioteca Graphics</a>
+                </li>
+                <li>
+                    <a href="#c-en-microcontroladores">C en microcontroladores</a>
+                </li>
+                <li>
+                    <a href="#ejemplos">Ejemplos</a>
+                </li>
+        </ul>
+        
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="introduccion">
+            <header>
+                <h2>Introducción</h2>
+            </header>
+            <h3>Características del lenguaje C</h3>
+            <p>
+                Es el lenguaje de programación de propósito general asociado al sistema operativo UNIXI Es un lenguaje de medio nivel.
+                Trata con objetos básicos como carácteres, números . . . ; también con bits y direcciones de memoria. Posee una gran portabilidad. Se utiliza para la programación de sistemas: construcción de interpretes, compiladores, editores de texto, etc.
+            </p>
+            <h3>Estructura de un programa en C</h3>
+            <p>
+                Un programa en C consta de uno o más módulos (ficheros fuentes).
+                Cada módulo puede contener: directivas del precompilador, p.e para \incluir" otros ficheros (#include) y \definir" constantes y macros (#define).
+                Declaraciones de variables y prototipos de funciones, una o más funciones, comentarios.
+            </p>
+            <h3>Primeros ejemplos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem incidunt sit voluptas impedit ratione quod reprehenderit beatae distinctio, nihil voluptatibus laudantium laborum dolorum nisi rem molestias, non nobis temporibus necessitatibus!</p>
+            <div class="codigo">
+                <code>
+                    #include stdio.h <br> main(){ <br> printf("hola, primer programa en C\n"); <br> }"
+                </code>
+            </div>
+            <h3>Compilación de un programa</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus voluptas alias doloribus eligendi earum sapiente accusantium fugiat, vero vitae aliquid maxime, laboriosam minima distinctio tempora dignissimos, odit molestias sint.
+            </p>
+            <h3>Directivas del precompilador</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui vero consequatur accusamus unde nostrum repellendus id iure obcaecati aspernatur odio maiores repudiandae voluptates fuga, culpa, facilis asperiores enim voluptas ducimus!</p>
+            <h3>Depuración</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste harum voluptatibus obcaecati dicta officiis, magni ea nisi illum exercitationem eaque quidem voluptates odit quasi aliquam impedit quos delectus eveniet accusantium?</p>
+            <h3>make</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, id sequi! Eligendi minima ipsum dignissimos facere eius incidunt fuga iusto aspernatur, possimus ut, repellendus libero, porro ipsam reiciendis corrupti adipisci.</p>
+            <h3>ejercicios</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, enim. Eos officiis, dicta praesentium mollitia accusamus ab esse quibusdam, maiores porro repudiandae vel ad consectetur amet quam quidem numquam? Distinctio.</p>
+            <div class="codigo">
+                <code>
+                    #include stdio.h <br>
+                        main() <br>
+                        { <br>
+                        int fahr, celsius; <br>
+                        int lower, upper, step; <br>
+                        lower=0; <br>
+                        upper=300; <br>
+                        step=20; <br>
+                        fahr=lower; <br>
+                        while(fahr<=upper) <br>
+                        { <br>
+                            celsius=5*(fahr-32)/9; <br>
+                            printf("%d\t%d\n",fahr,celsius); <br>
+                            fahr=fahr+step; <br>
+                        }<br>
+                    } <br>
+                </code>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repudiandae quaerat repellat dolore quisquam, necessitatibus a dignissimos at rerum voluptate incidunt neque, hic corporis nesciunt, blanditiis maxime. Ipsa enim facere dolorem!</p>
+            <div class="codigo">
+                <code>
+                    #include "funcion1.h" <br>
+                    void funcion1(void) <br>
+                    { <br>
+                    int i=MAX1; <br>
+                    return; <br>
+                    } <br>
+                    #include "funcion2.h"<br>
+                    void funcion2(void)<br>
+                    {<br>
+                    int j=MAX2;<br>
+                    return;<br>
+                    }<br>
+                </code>
+            </div>
+        </section>
+        <section class="main-section" id="tipos-operadores-expreciones">
+            <h2>Tipos, operadores y expresiones</h2>
+            <h3>Nombres de variables</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt doloribus assumenda, omnis sapiente dolorem autem soluta, quos fugiat mollitia cumque non possimus blanditiis nam impedit est voluptas ipsum molestiae unde?</p>
+            <h3>Tipos y tamaños de datos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>ConstantesDeclaraciones de variables</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>Operadores de relación y lógicos</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>Conversiones de tipo</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <ul class="lista">
+                <li>1. While</li>
+                <li>2. for</li>
+                <li>3. if</li>
+                <li>4. else</li>
+                <li>5. dowhile</li>
+            </ul>
+            <h3>Operadores de bit</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>incremento y decremento, asignacion y expresiones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>Exprecion condicional</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>Precedencia y orden</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nemo quos commodi cupiditate obcaecati perferendis veritatis, vel doloribus saepe distinctio tempora mollitia alias. Veritatis, ut voluptate illum ipsa blanditiis atque?</p>
+            <h3>Ejercicios</h3>
+        </section>
+        <section class="main-section" id="control-de-flujo">
+            <h2>Control de flujo</h2>
+            <h3>Sentencias y bloques</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+            <h3>if else</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+            <h3>else if</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>   
+            <h3>switch</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+            <h3>Bucle while for y do...while</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+            <h3>break y continue</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+            <h3>goto y etiquetas</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus, consequuntur exercitationem delectus dolore dicta, aliquam debitis, saepe officiis dignissimos temporibus ut cupiditate voluptas accusantium quia assumenda expedita iusto at! Perferendis.</p>
+        </section>
+        <section class="main-section" id="arrays-y-punteros">
+            <h2>Arrays y punteros</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+
+        </section>
+        <section class="main-section" id="estructuras">
+            <h2>Estructuras</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <ul class="lista">
+                <li>1. While</li>
+                <li>2. for</li>
+                <li>3. if</li>
+                <li>4. else</li>
+                <li>5. dowhile</li>
+            </ul>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+        </section>
+        <section class="main-section" id="biblioteca-c">
+            <h2>Biblioteca C</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+        </section>
+        <section class="main-section" id="herramientas">
+            <h2>Herreamientas</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <ul class="lista">
+                <li>1. While</li>
+                <li>2. for</li>
+                <li>3. if</li>
+                <li>4. else</li>
+                <li>5. dowhile</li>
+            </ul>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+        </section>
+        <section class="main-section" id="biblioteca-stdio">
+            <h2>Biblioteca stdio.h</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+            <ul class="lista">
+                <li>1. While</li>
+                <li>2. for</li>
+                <li>3. if</li>
+                <li>4. else</li>
+                <li>5. dowhile</li>
+            </ul>
+        </section>
+        <section class="main-section" id="biblioteca-graphics">
+            <h2>Biblioteca Graphics</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <ul class="lista">
+                <li>1. While</li>
+                <li>2. for</li>
+                <li>3. if</li>
+                <li>4. else</li>
+                <li>5. dowhile</li>
+            </ul>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+        </section>
+        <section class="main-section" id="c-en-microcontroladores">
+            <h2>C en microcontroladores</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y direcciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Punteros y argumentos a funciones</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Operaciones sobre punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays y punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays de punteros</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ad perspiciatis iste quaerat debitis saepe, quae necessitatibus qui quod perferendis, minus nemo eveniet magni voluptas possimus hic sed unde ducimus!</p>
+            <h3>Arrays multidimencionales</h3>
+        </section>
+        <section class="main-section" id="ejemplos">
+            <h2>Ejemplos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint, autem beatae voluptate quia ipsam, numquam cumque enim quis molestiae fugiat consectetur excepturi. Ipsum sit repudiandae, esse harum molestias dicta.</p>
+            <div class="codigo">
+                <code>
+                    #include stdio.h <br>
+                        int main( ) <br>
+                        { <br>
+                        int multiplicador; /*se define multiplicador como un entero */ <br> 
+                        int multiplicando; /*se define multiplicando como un entero */<br>
+                        int res; /*se define resultado como un entero*/<br>
+                        multiplicador = 1000; /*se asignan valores*/<br>
+                        multiplicando=2;<br>
+                        res=multiplicador*multiplicando;<br>
+                        printf("Resultado =%d",res); /*se muestra el resultado */<br>
+                        return 0;<br>
+                        }<br>
+                </code>
+            </div>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Placeat iste ipsa cum et perspiciatis, vero eveniet distinctio earum autem deserunt magnam, eos ullam itaque veniam nulla, cupiditate doloremque quo beatae.</p>
+            <div class="codigo">
+                <code>
+                    int main( ) { <br>
+                        int multiplicador, multiplicando; /*se definen 2 variables*/<br>
+                        multiplicador =1000; /*se les asigna valor*/<br>
+                        multiplicando=2;<br>
+                        printf("Resultado = %d", multiplicador*multiplicando);<br>
+                        /*se muestra el resultado por pantalla*/<br>
+                        return 0;<br>
+                        }<br>
+                </code>
+            </div>
+        </section>
+    </main>
+</html>
